@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Palabras Aleatorias</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎲 JUEGO ALEATORIO DE PALABRAS 🎲</h1>
+
+        <div id="playerSelection">
+            <p>Selecciona la cantidad de jugadores:</p>
+            <div class="player-button">
+                <button class="player-btn" data-players="2">
+                    <img src="Assets/img/2.jpg" alt="2 jugadores">
+                </button>
+                <button class="player-btn" data-players="3">
+                    <img src="Assets/img/3.jpg" alt="3 jugadores">
+                </button>
+                <button class="player-btn" data-players="4">
+                    <img src="Assets/img/4.jpg" alt="4 jugadores">
+                </button>
+            </div>
+            <button id="startGameBtn">🎮 Iniciar Juego</button>
+            <p class="comment">¡Sé rápido y no repitas palabras!</p>
+        </div>
+
+        <div id="gameSection" class="hidden">
+            <p>🔠 Letra aleatoria: <span id="randomLetter">?</span></p>
+            <p>🎭 Turno de: <span id="playerTurn">Jugador 1</span></p>
+            <p>⏳ Tiempo restante: <span id="timer"></span> seg</p>
+            <input type="text" id="wordInput" placeholder="Ingresa una palabra">
+            <button id="addWordBtn">✔ Agregar Palabra</button>
+        </div>
+
+        <div id="resultSection" class="hidden">
+            <h2>🏆 Resultado del juego 🏆</h2>
+            <p id="winnerMessage"></p>
+            <ul id="finalWordList"></ul>
+            <button id="restartGameBtn">🔄 Reiniciar</button>
+        </div>
+    </div>
+
+    <script type="module" src="Scripts/main.js"></script>
+</body>
+</html>
